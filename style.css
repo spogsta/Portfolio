@@ -28,6 +28,15 @@ h2 {
     justify-content: center;
     height: 100vh;
     flex-direction: column;
+    position: relative;
+  }
+
+  #middleHeader{
+    position: absolute; /* Set the h2 element to absolute positioning */
+    top: 0; /* Stick it to the top of the container */
+    width: 100%; /* Make it span the full width of the container */
+    text-align: center; /* Center the text horizontally */
+    background-color: aquamarine;
   }
 
   #lowerContainer {
@@ -37,4 +46,16 @@ h2 {
     justify-content: center;
     height: 100vh;
     flex-direction: column;
+    position: relative;
+  }
+#projectContainer{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+  #project1{
+    background-color: brown;
   }
