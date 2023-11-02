@@ -9,6 +9,6 @@ Brainstorming design and content ideas - I think I have a general color scheme i
 I still need to comment my code. 
 
 
-created a neat carousel function that spins between different images - going to probably use this as a "languages I've learnt" kind of thing. It's pretty cool.
+created a neat carousel function that spins between different images - going to probably use this as a "languages I've learnt" kind of thing. It's pretty cool. Not centered for some reason though...idk. CSS lol.
 
 again, still need to comment code.
