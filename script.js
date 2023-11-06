@@ -84,3 +84,27 @@ const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryCont
 
 exampleCarousel.setControls();
 exampleCarousel.useControls();
+
+// JavaScript
+const nameElement = document.getElementById('name');
+const jobTitleElement = document.getElementById('job-title');
+
+function startNameAnimation() {
+  nameElement.style.animation = 'typing-name 3s steps(20) 1';
+}
+
+function startJobTitleAnimation() {
+  jobTitleElement.style.animation = 'typing-job-title 3s steps(20) 1';
+}
+
+// Initially, hide the job title element
+jobTitleElement.style.display = 'none';
+
+// Start the name animation first
+startNameAnimation();
+
+// Wait for the name animation to finish and then show and start the job title animation
+nameElement.addEventListener('animationend', function () {
+  jobTitleElement.style.display = 'block';
+  startJobTitleAnimation();
+});
