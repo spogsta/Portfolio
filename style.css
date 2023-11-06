@@ -17,17 +17,7 @@ h2 {
     flex-direction: column;
   }
 
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-  }
-  
-#upperContent h1 {
-    overflow: hidden;
-    border-right: 2px solid #000;
-    white-space: nowrap;
-    animation: typing 3s steps(20) 1;
-  }
+
 
 #img {
     display: flex;
@@ -317,3 +307,29 @@ h1 {
 #lowerContainer {
   background: linear-gradient(to bottom, #333, #000); /* Dark grey to black gradient */
 }
+
+#name, #job-title {
+  overflow: hidden;
+  border-right: 2px solid #000;
+  white-space: nowrap;
+}
+
+#name {
+  animation: typing-name 3s steps(20) 1;
+}
+
+#job-title {
+  animation: typing-job-title 3s steps(20) 1;
+  animation-delay: 3s; /* Delay the job title animation by the duration of the name animation */
+}
+
+@keyframes typing-name {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes typing-job-title {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
