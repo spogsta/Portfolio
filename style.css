@@ -4,7 +4,7 @@ body{
 }
 
 h2 {
-    font-family: Lato;
+    
     color: red;
   }
 
@@ -25,7 +25,7 @@ h2 {
   }
 
 #upperContent {
-    background-color: green;
+    color: green;
   }
 
 #middleContainer {
@@ -43,7 +43,7 @@ h2 {
     top: 0; /* Stick it to the top of the container */
     width: 100%; /* Make it span the full width of the container */
     text-align: center; /* Center the text horizontally */
-    background-color: aquamarine;
+    
   }
 
 #lowerContainer {
@@ -64,21 +64,33 @@ h2 {
 }
 
 #project1 {
-  background-color: brown;
+  background-color: #800000;
   margin: 10px; /* Add some margin between the project items */
   padding: 20px; /* Add some padding to space them out */
 }
 
 #project2{
-  background-color: red;
+  background-color: #800000;
   margin: 10px; /* Add some margin between the project items */
   padding: 20px; /* Add some padding to space them out */
 }
 
 #project3{
-  background-color: blue;
+  background-color: #800000;
   margin: 10px; /* Add some margin between the project items */
   padding: 20px; /* Add some padding to space them out */
+}
+
+.project-box {
+  flex: 1; /* Take up equal space */
+  background-color: #f1f1f1; /* Light grey background */
+  border-radius: 5px; /* Rounded corners */
+  padding: 15px; /* Add padding to project content */
+  text-align: center; /* Center project content */
+}
+.projectImage{
+  width: 400px;
+  height: 400px;
 }
 
 
@@ -148,6 +160,8 @@ h2 {
   justify-content: center;
   margin: 25px 0;
   height: 100px;
+  color: white;
+  
 }
 
 .gallery-controls button{
@@ -158,6 +172,7 @@ h2 {
   margin: 0 50px;
   padding: 0 12px;
   text-transform: capitalize;
+  color: white;
 }
 
 .gallery-controls-button:focus {
@@ -192,6 +207,7 @@ h2 {
 }
 
 .gallery-controls-next::before{
+  
   border: solid #000;
   border-width: 0 5px 5px 0;
   content: '';
@@ -204,10 +220,16 @@ h2 {
   transform: rotate(-45deg) translateY(-50%);
   transition: right 0.15s ease-in-out;
   width: 5px;
+  
 }
 
 .gallery-controls-next:hover::before{
   right: -40px;
+}
+
+.gallery-controls-previous::before,
+.gallery-controls-next::before {
+  color: white;
 }
 
 .gallery-nav{
@@ -218,6 +240,7 @@ h2 {
   padding: 0;
   position: absolute;
   width: 100%;
+  
 }
 
 .gallery nav li {
@@ -275,17 +298,25 @@ h2 {
 }
 
 #scrollBtn {
+  position: absolute;
+  z-index: 3;
+  top: 90%; /* Push the button below the gallery */
+  left: 50%; /* Center it horizontally within its parent container */
+  transform: translateX(-50%); /* Center horizontally */
   background-color: #800000; /* Deep red maroon background color */
   color: #fff; /* White text color for better visibility */
+  padding: 10px 20px; /* Add padding to the button to make it larger and more visible */
+  border: none; /* Remove the border */
+  cursor: pointer;
+  font-size: 18px; /* Adjust the font size as needed */
 }
-
 #scrollBtnTwo {
   background-color: #800000; /* Deep red maroon background color */
   color: #fff; /* White text color for better visibility */
 }
 
 #middleHeader {
-  color: #800000; /* Deep red maroon text color */
+  color: white; /* Deep red maroon text color */
 }
 
 #mainWrapper {
