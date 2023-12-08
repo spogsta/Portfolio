@@ -367,3 +367,36 @@ a{
   color: white;
   text-decoration: none;
 }
+
+
+
+
+
+#projectContainer {
+  display: flex;
+  flex-direction: column; /* Stack project boxes vertically on all screens */
+}
+
+.project-box {
+  max-width: 400px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.projectImage {
+  width: 100%;
+  height: auto;
+}
+
+
+
+/* Additional styles for larger screens (if needed) */
+@media (min-width: 768px) {
+  #projectContainer {
+    flex-direction: row; /* Display project boxes horizontally on larger screens */
+    justify-content: space-around;
+  }
+}
