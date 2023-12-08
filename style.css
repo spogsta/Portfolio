@@ -13,7 +13,7 @@ h2 {
     background-color: #333333;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 80vh;
     flex-direction: column;
   }
 
@@ -33,7 +33,7 @@ h2 {
     background-color: orange;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 120vh;
     flex-direction: column;
     position: relative;
   }
@@ -55,45 +55,34 @@ h2 {
     flex-direction: column;
     position: relative;
   }
-#projectContainer{
-    flex: 1;
+
+
+  #projectContainer {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-#project1 {
-  background-color: #800000;
-  margin: 10px; /* Add some margin between the project items */
-  padding: 20px; /* Add some padding to space them out */
-}
-
-#project2{
-  background-color: #800000;
-  margin: 10px; /* Add some margin between the project items */
-  padding: 20px; /* Add some padding to space them out */
-}
-
-#project3{
-  background-color: #800000;
-  margin: 10px; /* Add some margin between the project items */
-  padding: 20px; /* Add some padding to space them out */
-}
-
-.project-box {
-  flex: 1; /* Take up equal space */
-  background-color: #f1f1f1; /* Light grey background */
-  border-radius: 5px; /* Rounded corners */
-  padding: 15px; /* Add padding to project content */
-  text-align: center; /* Center project content */
-}
-.projectImage{
-  width: 400px;
-  height: 400px;
-}
-
-
+    justify-content: space-around;
+  }
+  
+  .project-box {
+    flex: 1;
+    max-width: 400px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .projectImage {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Apply styles consistently to individual projects */
+  #project1, #project2, #project3 {
+    max-width: 400px;
+    flex: 1;
+    background-color: #800000;
+  }
 
 .gallery-container {
   align-items: center;
@@ -107,7 +96,7 @@ h2 {
 .gallery-item{
   height: 200px;
   opacity: 0;
-  position: absolute;
+  position: absolute; 
   transition: all 0.3s ease-in-out;
   width: 330px;
   z-index: 0;
@@ -184,7 +173,7 @@ h2 {
 }
 
 .gallery-controls-previous::before{
-  border: solid #000;
+  border: solid white;
   border-width: 0 5px 5px 0;
   content: '';
   display: inline-block;
@@ -208,7 +197,7 @@ h2 {
 
 .gallery-controls-next::before{
   
-  border: solid #000;
+  border: solid white;
   border-width: 0 5px 5px 0;
   content: '';
   display: inline-block;
@@ -286,6 +275,7 @@ h2 {
 
 #middleContainer {
   background-color: #333; /* Dark grey background */
+  
 }
 
 #middleContent {
@@ -332,7 +322,9 @@ h1 {
 }
 
 #middleContainer {
+
   background: linear-gradient(to bottom, #000, #333); /* Dark grey to black gradient */
+  
 }
 
 #lowerContainer {
@@ -341,17 +333,17 @@ h1 {
 
 #name, #job-title {
   overflow: hidden;
-  border-right: 2px solid #000;
   white-space: nowrap;
+  color: white;
 }
 
 #name {
-  animation: typing-name 3s steps(20) 1;
+  animation: typing-name 2s steps(20) 1;
 }
 
 #job-title {
-  animation: typing-job-title 3s steps(20) 1;
-  animation-delay: 3s; /* Delay the job title animation by the duration of the name animation */
+  animation: typing-job-title 2s steps(20) 1;
+  animation-delay: 2s; /* Delay the job title animation by the duration of the name animation */
 }
 
 @keyframes typing-name {
@@ -364,3 +356,14 @@ h1 {
   to { width: 100%; }
 }
 
+.project-box:hover {
+  transform: scale(1.1); /* Scale the project box on hover */
+  transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow on hover */
+  color: gold; /* Change the link color on hover */
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
