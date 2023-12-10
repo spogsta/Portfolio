@@ -1,7 +1,8 @@
 function scrollPage() {
     const pageHeight = window.innerHeight;
     const currentPosition = window.scrollY;
-    const targetPosition = currentPosition + pageHeight;
+    const zoomLevel = window.devicePixelRatio; // Get the current zoom level
+    const targetPosition = currentPosition + (pageHeight * zoomLevel) + 200;
     const animationDuration = 750; // You can adjust the duration as needed (in milliseconds)
     const startTime = performance.now();
 
