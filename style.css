@@ -40,8 +40,8 @@ h2 {
   }
 
 #middleHeader{
-    position: absolute; /* Set the h2 element to absolute positioning */
-    top: 10%; /* Stick it to the top of the container */
+
+
     width: 100%; /* Make it span the full width of the container */
     text-align: center; /* Center the text horizontally */
     
@@ -208,7 +208,7 @@ h2 {
   padding: 10px;
   position: absolute;
   right: -30px;
-  top: 45px;
+  top: 50px;
   transform: rotate(-45deg) translateY(-50%);
   transition: right 0.15s ease-in-out;
   width: 5px;
@@ -402,16 +402,34 @@ a{
     flex-direction: row; /* Display project boxes horizontally on larger screens */
     justify-content: space-around;
   }
+
+
 }
 
-.gallery-item {
-  /* Your existing styles for the gallery items */
-}
 
 /* Add media queries to adjust the styles for different screen sizes and zoom levels */
 @media (max-width: 768px) {
   .gallery-container {
     height: 15em; /* Adjust the height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-container {
+    height: 10em; /* Adjust the height for even smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    height: 15em; /* Adjust the height for smaller screens */
+  }
+  #middleContainer{
+    height: 120em;
+  }
+  .gallery-item {
+    width: 5em;
+    height: 5em;
   }
 }
 
